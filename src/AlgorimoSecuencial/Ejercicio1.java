@@ -27,17 +27,66 @@ public class Ejercicio1 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        txtPersonaUno = new javax.swing.JTextField();
+        txtPersonaDos = new javax.swing.JTextField();
+        txtPersonaTres = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        txtTotalInvertido = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        txtInversionUno = new javax.swing.JTextField();
+        txtInversionTres = new javax.swing.JTextField();
+        txtInversionDos = new javax.swing.JTextField();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setFont(new java.awt.Font("Arial", 3, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel1.setText("Precesador De Datos");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, 250, 30));
+
+        jLabel2.setFont(new java.awt.Font("Arial", 2, 18)); // NOI18N
+        jLabel2.setText("Persona 1");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 110, 90, 30));
+
+        jLabel3.setFont(new java.awt.Font("Arial", 2, 18)); // NOI18N
+        jLabel3.setText("Persona 2");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, 90, 30));
+
+        jLabel4.setFont(new java.awt.Font("Arial", 2, 18)); // NOI18N
+        jLabel4.setText("Persona 3");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, 90, 30));
+        jPanel1.add(txtPersonaUno, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 110, 110, 30));
+        jPanel1.add(txtPersonaDos, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 160, 110, 30));
+        jPanel1.add(txtPersonaTres, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 210, 110, 30));
+
+        jLabel5.setFont(new java.awt.Font("Arial", 2, 14)); // NOI18N
+        jLabel5.setText("total invertido");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 60, -1, -1));
+        jPanel1.add(txtTotalInvertido, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, 80, -1));
+
+        jLabel6.setFont(new java.awt.Font("Arial", 3, 24)); // NOI18N
+        jLabel6.setText("%");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 70, -1, -1));
+        jPanel1.add(txtInversionUno, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 110, 40, 30));
+        jPanel1.add(txtInversionTres, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 210, 40, 30));
+        jPanel1.add(txtInversionDos, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 160, 40, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -79,5 +128,19 @@ public class Ejercicio1 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField txtInversionDos;
+    private javax.swing.JTextField txtInversionTres;
+    private javax.swing.JTextField txtInversionUno;
+    private javax.swing.JTextField txtPersonaDos;
+    private javax.swing.JTextField txtPersonaTres;
+    private javax.swing.JTextField txtPersonaUno;
+    private javax.swing.JTextField txtTotalInvertido;
     // End of variables declaration//GEN-END:variables
 }
