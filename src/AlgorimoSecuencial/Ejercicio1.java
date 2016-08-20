@@ -41,6 +41,8 @@ public class Ejercicio1 extends javax.swing.JFrame {
         txtInversionUno = new javax.swing.JTextField();
         txtInversionTres = new javax.swing.JTextField();
         txtInversionDos = new javax.swing.JTextField();
+        cmdCalcular = new javax.swing.JButton();
+        cmdBorrar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -77,6 +79,12 @@ public class Ejercicio1 extends javax.swing.JFrame {
         jPanel1.add(txtInversionUno, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 110, 40, 30));
         jPanel1.add(txtInversionTres, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 210, 40, 30));
         jPanel1.add(txtInversionDos, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 160, 40, 30));
+
+        cmdCalcular.setText("Calcular");
+        jPanel1.add(cmdCalcular, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 260, -1, -1));
+
+        cmdBorrar.setText("Borrar");
+        jPanel1.add(cmdBorrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 260, 70, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -128,6 +136,8 @@ public class Ejercicio1 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton cmdBorrar;
+    private javax.swing.JButton cmdCalcular;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
