@@ -71,6 +71,12 @@ public class Ejercicio1 extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Arial", 2, 14)); // NOI18N
         jLabel5.setText("total invertido");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 60, -1, -1));
+
+        txtTotalInvertido.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtTotalInvertidoActionPerformed(evt);
+            }
+        });
         jPanel1.add(txtTotalInvertido, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, 80, -1));
 
         jLabel6.setFont(new java.awt.Font("Arial", 3, 24)); // NOI18N
@@ -81,6 +87,11 @@ public class Ejercicio1 extends javax.swing.JFrame {
         jPanel1.add(txtInversionDos, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 160, 40, 30));
 
         cmdCalcular.setText("Calcular");
+        cmdCalcular.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmdCalcularActionPerformed(evt);
+            }
+        });
         jPanel1.add(cmdCalcular, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 260, -1, -1));
 
         cmdBorrar.setText("Borrar");
@@ -90,15 +101,55 @@ public class Ejercicio1 extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 387, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 317, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void txtTotalInvertidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTotalInvertidoActionPerformed
+        
+    }//GEN-LAST:event_txtTotalInvertidoActionPerformed
+
+    private void cmdCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdCalcularActionPerformed
+        String per1, per2, per3;
+        
+        double p1, p2, p3, i1, i2, i3, it=1, res;
+        
+        per1=txtPersonaUno.getText();
+        per2=txtPersonaDos.getText();
+        per3=txtPersonaTres.getText();
+        
+        
+        
+        p1=Double.parseDouble(per1);
+        p2=Double.parseDouble(per2);
+        p3=Double.parseDouble(per3);
+        
+        
+        
+        res=p1+p2+p3;
+        
+        i1=(p1/it)*100;
+        i2=(p2/it)*100;
+        i3=(p3/it)*100;
+        
+        txtPersonaUno.setText(""+p1);
+        txtPersonaDos.setText(""+p2);
+        txtPersonaTres.setText(""+p3);
+        
+        txtTotalInvertido.setText(""+res);
+        
+        txtInversionUno.setText(""+i1);
+        txtInversionDos.setText(""+i2);
+        txtInversionTres.setText(""+i3);
+        
+        
+    }//GEN-LAST:event_cmdCalcularActionPerformed
 
     /**
      * @param args the command line arguments
