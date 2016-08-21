@@ -5,6 +5,10 @@
  */
 package AlgorimoSecuencial;
 
+import java.text.DecimalFormat;
+import javax.swing.JOptionPane;
+
+
 /**
  *
  * @author aldair
@@ -16,7 +20,11 @@ public class Ejercicio1 extends javax.swing.JFrame {
      */
     public Ejercicio1() {
         initComponents();
+        this.setLocationRelativeTo(null);
+       
     }
+    
+   
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -43,69 +51,137 @@ public class Ejercicio1 extends javax.swing.JFrame {
         txtInversionDos = new javax.swing.JTextField();
         cmdCalcular = new javax.swing.JButton();
         cmdBorrar = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(0, 0, 0));
+        setUndecorated(true);
 
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Arial", 3, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 0, 0));
         jLabel1.setText("Precesador De Datos");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, 250, 30));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, 250, 30));
 
         jLabel2.setFont(new java.awt.Font("Arial", 2, 18)); // NOI18N
         jLabel2.setText("Persona 1");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 110, 90, 30));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 90, 30));
 
         jLabel3.setFont(new java.awt.Font("Arial", 2, 18)); // NOI18N
         jLabel3.setText("Persona 2");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, 90, 30));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, 90, 30));
 
         jLabel4.setFont(new java.awt.Font("Arial", 2, 18)); // NOI18N
         jLabel4.setText("Persona 3");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, 90, 30));
-        jPanel1.add(txtPersonaUno, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 110, 110, 30));
-        jPanel1.add(txtPersonaDos, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 160, 110, 30));
-        jPanel1.add(txtPersonaTres, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 210, 110, 30));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 90, 30));
+
+        txtPersonaUno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPersonaUnoActionPerformed(evt);
+            }
+        });
+        txtPersonaUno.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtPersonaUnoKeyTyped(evt);
+            }
+        });
+        jPanel1.add(txtPersonaUno, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 110, 110, 30));
+
+        txtPersonaDos.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtPersonaDosKeyTyped(evt);
+            }
+        });
+        jPanel1.add(txtPersonaDos, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 160, 110, 30));
+
+        txtPersonaTres.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtPersonaTresKeyTyped(evt);
+            }
+        });
+        jPanel1.add(txtPersonaTres, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 210, 110, 30));
 
         jLabel5.setFont(new java.awt.Font("Arial", 2, 14)); // NOI18N
         jLabel5.setText("total invertido");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 60, -1, -1));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, -1, -1));
 
         txtTotalInvertido.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtTotalInvertidoActionPerformed(evt);
             }
         });
-        jPanel1.add(txtTotalInvertido, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, 80, -1));
+        jPanel1.add(txtTotalInvertido, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, 130, -1));
 
         jLabel6.setFont(new java.awt.Font("Arial", 3, 24)); // NOI18N
         jLabel6.setText("%");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 70, -1, -1));
-        jPanel1.add(txtInversionUno, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 110, 40, 30));
-        jPanel1.add(txtInversionTres, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 210, 40, 30));
-        jPanel1.add(txtInversionDos, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 160, 40, 30));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 70, -1, -1));
 
+        txtInversionUno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtInversionUnoActionPerformed(evt);
+            }
+        });
+        jPanel1.add(txtInversionUno, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 110, 120, 30));
+        jPanel1.add(txtInversionTres, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 210, 120, 30));
+
+        txtInversionDos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtInversionDosActionPerformed(evt);
+            }
+        });
+        jPanel1.add(txtInversionDos, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 160, 120, 30));
+
+        cmdCalcular.setBackground(new java.awt.Color(0, 0, 102));
+        cmdCalcular.setForeground(new java.awt.Color(255, 255, 255));
         cmdCalcular.setText("Calcular");
         cmdCalcular.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdCalcularActionPerformed(evt);
             }
         });
-        jPanel1.add(cmdCalcular, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 260, -1, -1));
+        jPanel1.add(cmdCalcular, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 280, -1, -1));
 
+        cmdBorrar.setBackground(new java.awt.Color(0, 0, 102));
+        cmdBorrar.setForeground(new java.awt.Color(255, 255, 255));
         cmdBorrar.setText("Borrar");
-        jPanel1.add(cmdBorrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 260, 70, -1));
+        cmdBorrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmdBorrarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(cmdBorrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 280, 70, -1));
+
+        jLabel7.setFont(new java.awt.Font("Arial", 2, 14)); // NOI18N
+        jLabel7.setText("Inversion");
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 80, -1, 10));
+
+        jButton1.setBackground(new java.awt.Color(0, 0, 0));
+        jButton1.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 0, 0));
+        jButton1.setText("SALIR");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 0, 70, -1));
+
+        fondo.setIcon(new javax.swing.ImageIcon("C:\\Users\\aldair\\Desktop\\istock_000019699924small.jpg")); // NOI18N
+        jPanel1.add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 380, 350));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 387, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 317, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -118,8 +194,23 @@ public class Ejercicio1 extends javax.swing.JFrame {
     private void cmdCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdCalcularActionPerformed
         String per1, per2, per3;
         
-        double p1, p2, p3, i1, i2, i3, it=1, res;
+        double p1, p2, p3, i1, i2, i3, it, res;
         
+        
+        
+        if(txtPersonaUno.getText().trim().isEmpty() && txtPersonaDos.getText().trim().isEmpty() && txtPersonaTres.getText().trim().isEmpty()){
+            JOptionPane.showMessageDialog(null, "Por favor LLENE los espacios en blanco", "ERROR", JOptionPane.WARNING_MESSAGE);
+        }else if(txtPersonaUno.getText().trim().isEmpty()){
+            JOptionPane.showMessageDialog(null, "Falta  la primera cantidad", "ERROR", JOptionPane.WARNING_MESSAGE);
+        }else if(txtPersonaDos.getText().trim().isEmpty()){
+            JOptionPane.showMessageDialog(null, "Falta  la segunda cantidad", "ERROR", JOptionPane.WARNING_MESSAGE);
+        }else if(txtPersonaTres.getText().trim().isEmpty()){
+            JOptionPane.showMessageDialog(null, "Falta  la tercera cantidad", "ERROR", JOptionPane.WARNING_MESSAGE);
+        }else{
+            
+         
+        try {
+          
         per1=txtPersonaUno.getText();
         per2=txtPersonaDos.getText();
         per3=txtPersonaTres.getText();
@@ -130,13 +221,11 @@ public class Ejercicio1 extends javax.swing.JFrame {
         p2=Double.parseDouble(per2);
         p3=Double.parseDouble(per3);
         
-        
-        
         res=p1+p2+p3;
         
-        i1=(p1/it)*100;
-        i2=(p2/it)*100;
-        i3=(p3/it)*100;
+        i1=(p1/res)*100;
+        i2=(p2/res)*100;
+        i3=(p3/res)*100;
         
         txtPersonaUno.setText(""+p1);
         txtPersonaDos.setText(""+p2);
@@ -147,9 +236,84 @@ public class Ejercicio1 extends javax.swing.JFrame {
         txtInversionUno.setText(""+i1);
         txtInversionDos.setText(""+i2);
         txtInversionTres.setText(""+i3);
+        }
         
-        
+        catch(Exception e){
+           JOptionPane.showMessageDialog(null, "hay errores en algunos numeros, por favor corregirlos", "ERROR", JOptionPane.WARNING_MESSAGE);
+         }
+        }
     }//GEN-LAST:event_cmdCalcularActionPerformed
+
+    private void txtInversionDosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtInversionDosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtInversionDosActionPerformed
+
+    private void cmdBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdBorrarActionPerformed
+        txtPersonaUno.setText("");
+        txtPersonaDos.setText("");
+        txtPersonaTres.setText("");
+        
+        txtTotalInvertido.setText("");
+        
+        txtInversionUno.setText("");
+        txtInversionDos.setText("");
+        txtInversionTres.setText("");
+        
+        txtPersonaUno.requestFocusInWindow();
+        
+        
+    }//GEN-LAST:event_cmdBorrarActionPerformed
+
+    private void txtPersonaUnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPersonaUnoActionPerformed
+       
+        
+    }//GEN-LAST:event_txtPersonaUnoActionPerformed
+
+    private void txtInversionUnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtInversionUnoActionPerformed
+     
+    }//GEN-LAST:event_txtInversionUnoActionPerformed
+
+    private void txtPersonaUnoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPersonaUnoKeyTyped
+        
+        char c=evt.getKeyChar();
+        
+        if(!Character.isDigit(evt.getKeyChar())&& evt.getKeyChar() != '.'){
+            getToolkit();
+            
+            evt.consume();
+        }
+        
+    }//GEN-LAST:event_txtPersonaUnoKeyTyped
+
+    private void txtPersonaDosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPersonaDosKeyTyped
+        
+        char c=evt.getKeyChar();
+        
+        if(!Character.isDigit(evt.getKeyChar()) && evt.getKeyChar() != '.'){
+            getToolkit();
+            
+            evt.consume();
+            
+        }
+    }//GEN-LAST:event_txtPersonaDosKeyTyped
+
+    private void txtPersonaTresKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPersonaTresKeyTyped
+        char c=evt.getKeyChar();
+        
+        if(!Character.isDigit(evt.getKeyChar()) && evt.getKeyChar() != '.'){
+            getToolkit();
+            
+            evt.consume();
+            
+        }
+    }//GEN-LAST:event_txtPersonaTresKeyTyped
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        
+        System.exit(0);
+        
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -189,12 +353,15 @@ public class Ejercicio1 extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton cmdBorrar;
     private javax.swing.JButton cmdCalcular;
+    private javax.swing.JLabel fondo;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField txtInversionDos;
     private javax.swing.JTextField txtInversionTres;
