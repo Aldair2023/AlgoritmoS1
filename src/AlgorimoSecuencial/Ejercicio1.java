@@ -21,7 +21,8 @@ public class Ejercicio1 extends javax.swing.JFrame {
     public Ejercicio1() {
         initComponents();
         this.setLocationRelativeTo(null);
-       
+        txtPersonaUno.requestFocusInWindow();
+        
     }
     
    
@@ -109,6 +110,7 @@ public class Ejercicio1 extends javax.swing.JFrame {
         jLabel5.setText("total invertido");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, -1, -1));
 
+        txtTotalInvertido.setEditable(false);
         txtTotalInvertido.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtTotalInvertidoActionPerformed(evt);
@@ -118,16 +120,20 @@ public class Ejercicio1 extends javax.swing.JFrame {
 
         jLabel6.setFont(new java.awt.Font("Arial", 3, 24)); // NOI18N
         jLabel6.setText("%");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 70, -1, -1));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 70, -1, -1));
 
+        txtInversionUno.setEditable(false);
         txtInversionUno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtInversionUnoActionPerformed(evt);
             }
         });
         jPanel1.add(txtInversionUno, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 110, 120, 30));
+
+        txtInversionTres.setEditable(false);
         jPanel1.add(txtInversionTres, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 210, 120, 30));
 
+        txtInversionDos.setEditable(false);
         txtInversionDos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtInversionDosActionPerformed(evt);
@@ -157,7 +163,7 @@ public class Ejercicio1 extends javax.swing.JFrame {
 
         jLabel7.setFont(new java.awt.Font("Arial", 2, 14)); // NOI18N
         jLabel7.setText("Inversion");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 80, -1, 10));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 80, -1, 10));
 
         jButton1.setBackground(new java.awt.Color(0, 0, 0));
         jButton1.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
@@ -238,7 +244,7 @@ public class Ejercicio1 extends javax.swing.JFrame {
         txtInversionTres.setText(""+i3);
         }
         
-        catch(Exception e){
+        catch(Exception a){
            JOptionPane.showMessageDialog(null, "hay errores en algunos numeros, por favor corregirlos", "ERROR", JOptionPane.WARNING_MESSAGE);
          }
         }
@@ -311,7 +317,6 @@ public class Ejercicio1 extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         
         System.exit(0);
-        
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
